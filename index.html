@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wearhaat | Premium Fashion Store</title>
+    <meta
+      name="description"
+      content="Wearhaat is a premium fashion e-commerce experience with modern luxury styling, curated collections, and seamless shopping."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="home">
+    <div class="page-loader" id="pageLoader">
+      <div class="loader-orb"></div>
+      <p>Loading Wearhaat</p>
+    </div>
+
+    <div class="ambient ambient-1"></div>
+    <div class="ambient ambient-2"></div>
+    <div class="ambient ambient-3"></div>
+
+    <header class="site-header">
+      <nav class="nav glass">
+        <a class="brand" href="index.html">Wearhaat</a>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="nav-panel" id="navPanel">
+          <div class="nav-links">
+            <a href="#collections">Collections</a>
+            <a href="#arrivals">New Arrivals</a>
+            <a href="#bestsellers">Best Sellers</a>
+            <a href="#reviews">Reviews</a>
+          </div>
+
+          <div class="nav-actions">
+            <label class="search-shell glass-soft">
+              <span>⌕</span>
+              <input type="search" placeholder="Search pieces" />
+            </label>
+            <button class="icon-button" aria-label="Wishlist">♡</button>
+            <button class="icon-button cart-button" aria-label="Shopping cart">
+              <span>👜</span>
+              <strong id="cartCount">2</strong>
+            </button>
+            <button class="icon-button" aria-label="User account">◌</button>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+              <span class="theme-dark">Dark</span>
+              <span class="theme-light">Light</span>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero section-shell">
+        <div class="hero-copy glass reveal">
+          <span class="eyebrow">Luxury essentials, redefined</span>
+          <h1>Fashion crafted for modern confidence.</h1>
+          <p>
+            Elevated silhouettes, premium textures, and clean contemporary styling built
+            for everyday distinction.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#arrivals">Shop New Arrivals</a>
+            <a class="button button-secondary" href="product.html">Explore Signature Piece</a>
+          </div>
+          <div class="hero-stats">
+            <div>
+              <strong>180+</strong>
+              <span>Premium drops</span>
+            </div>
+            <div>
+              <strong>4.9/5</strong>
+              <span>Verified ratings</span>
+            </div>
+            <div>
+              <strong>24h</strong>
+              <span>Express dispatch</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="hero-image-wrap">
+            <img src="assets/images/wearhaat-men.jpg" alt="Wearhaat premium fashion" />
+            <div class="floating-card glass">
+              <span>Editor's Pick</span>
+              <strong>Midnight Tailored Set</strong>
+              <p>Sharp structure, soft comfort, premium finish.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="trust-bar section-shell reveal">
+        <div class="glass trust-grid">
+          <div>
+            <span>Secure checkout</span>
+            <strong>256-bit encrypted payments</strong>
+          </div>
+          <div>
+            <span>Fast fulfillment</span>
+            <strong>Same-day dispatch on select cities</strong>
+          </div>
+          <div>
+            <span>Premium support</span>
+            <strong>Stylist assistance, seven days a week</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-shell reveal" id="collections">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Featured Collections</span>
+            <h2>Curated for every mood.</h2>
+          </div>
+          <a href="product.html">View lookbook</a>
+        </div>
+
+        <div class="collection-grid">
+          <article class="collection-card glass">
+            <div class="collection-media">
+              <img src="assets/images/wearhaat-men.jpg" alt="Men's collection" />
+            </div>
+            <div class="collection-copy">
+              <span>Men's Collection</span>
+              <h3>Tailored edge with quiet luxury.</h3>
+              <a href="#mens">Discover now</a>
+            </div>
+          </article>
+
+          <article class="collection-card glass gradient-panel">
+            <div class="collection-copy">
+              <span>Women's Collection</span>
+              <h3>Fluid lines, premium tones, statement minimalism.</h3>
+              <a href="#womens">Explore styles</a>
+            </div>
+            <div class="collection-abstract">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-shell" id="arrivals">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">New Arrivals</span>
+            <h2>Fresh drops with instant appeal.</h2>
+          </div>
+          <p>Modern essentials designed to convert browsing into desire.</p>
+        </div>
+
+        <div class="product-grid" id="productGrid"></div>
+      </section>
+
+      <section class="promo-band section-shell reveal">
+        <div class="glass promo-card">
+          <div>
+            <span class="eyebrow">Limited-Time Offers</span>
+            <h2>Up to 30% off premium layering essentials.</h2>
+            <p>Exclusive to members for the next 48 hours. Coupon support included at checkout.</p>
+          </div>
+          <a class="button button-primary" href="checkout.html">Unlock Offer</a>
+        </div>
+      </section>
+
+      <section class="section-shell dual-showcase">
+        <article class="showcase-panel glass reveal" id="bestsellers">
+          <div class="section-head compact">
+            <div>
+              <span class="eyebrow">Best Sellers</span>
+              <h2>Pieces customers return for.</h2>
+            </div>
+          </div>
+          <div class="mini-list">
+            <div>
+              <strong>Cloudline Overshirt</strong>
+              <span>4.9 rating · 1.2k sold</span>
+            </div>
+            <div>
+              <strong>Noir Essential Tee</strong>
+              <span>4.8 rating · 980 sold</span>
+            </div>
+            <div>
+              <strong>Studio Wide Trousers</strong>
+              <span>4.9 rating · 870 sold</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="showcase-panel glass reveal">
+          <div class="section-head compact">
+            <div>
+              <span class="eyebrow">Trending Products</span>
+              <h2>Momentum-led picks this week.</h2>
+            </div>
+          </div>
+          <div class="product-feature-inline">
+            <img src="assets/images/wearhaat-products.jpg" alt="Trending fashion products" />
+            <div>
+              <strong>Electric Blue Capsule</strong>
+              <p>Minimal neutrals energized with a signature blue highlight.</p>
+              <a href="product.html">Shop trend edit</a>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="section-shell split-categories">
+        <article class="category-panel glass reveal" id="mens">
+          <span class="eyebrow">Men's Collection</span>
+          <h2>Structure, depth, and confident restraint.</h2>
+          <p>
+            Clean tailoring, essential monochromes, and refined finishes that elevate the
+            everyday wardrobe.
+          </p>
+          <a class="button button-secondary" href="product.html">Shop Men</a>
+        </article>
+
+        <article class="category-panel glass reveal" id="womens">
+          <span class="eyebrow">Women's Collection</span>
+          <h2>Soft silhouettes with bold presence.</h2>
+          <p>
+            Luxurious textures, modern layering, and elegant shapes designed for versatile
+            styling.
+          </p>
+          <a class="button button-secondary" href="product.html">Shop Women</a>
+        </article>
+      </section>
+
+      <section class="section-shell reviews-section" id="reviews">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">Customer Reviews</span>
+            <h2>Trust built through every order.</h2>
+          </div>
+        </div>
+
+        <div class="review-grid">
+          <article class="review-card glass reveal">
+            <strong>“Feels like luxury, ships like tech.”</strong>
+            <p>
+              The packaging, quality, and checkout experience felt premium from start to finish.
+            </p>
+            <span>Rafid Hasan · Dhaka</span>
+          </article>
+          <article class="review-card glass reveal">
+            <strong>“The fit and fabric exceeded expectations.”</strong>
+            <p>
+              Minimal design, strong structure, and the product page made size selection easy.
+            </p>
+            <span>Mehnaz Jui · Chattogram</span>
+          </article>
+          <article class="review-card glass reveal">
+            <strong>“Fast, elegant, and genuinely trustworthy.”</strong>
+            <p>
+              Order tracking was clear, payment felt secure, and the clothes looked even better in person.
+            </p>
+            <span>Tanvir Hossain · Sylhet</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-shell newsletter-section reveal">
+        <div class="glass newsletter-card">
+          <div>
+            <span class="eyebrow">Newsletter</span>
+            <h2>Join the private list for early access drops.</h2>
+            <p>New collections, exclusive codes, and curated style notes delivered with restraint.</p>
+          </div>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Enter your email" />
+            <button type="submit" class="button button-primary">Subscribe</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer section-shell">
+      <div class="footer-grid glass">
+        <div>
+          <a class="brand" href="index.html">Wearhaat</a>
+          <p>Premium fashion built for modern wardrobes and high-conversion experiences.</p>
+        </div>
+        <div>
+          <strong>Shop</strong>
+          <a href="#arrivals">New Arrivals</a>
+          <a href="#bestsellers">Best Sellers</a>
+          <a href="checkout.html">Offers</a>
+        </div>
+        <div>
+          <strong>Support</strong>
+          <a href="product.html">Sizing Guide</a>
+          <a href="checkout.html">Shipping & Returns</a>
+          <a href="checkout.html#tracking">Order Tracking</a>
+        </div>
+        <div>
+          <strong>Contact</strong>
+          <a href="mailto:concierge@wearhaat.com">concierge@wearhaat.com</a>
+          <a href="tel:+8801700000000">+880 17 0000 0000</a>
+          <span>Premium support, 10am-10pm</span>
+        </div>
+      </div>
+    </footer>
+
+    <div class="quick-view-modal" id="quickViewModal" aria-hidden="true">
+      <div class="modal-backdrop" data-close-modal></div>
+      <div class="modal-panel glass">
+        <button class="modal-close" data-close-modal aria-label="Close quick view">✕</button>
+        <div class="modal-content" id="modalContent"></div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

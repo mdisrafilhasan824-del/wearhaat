@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wearhaat | Secure Checkout</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="checkout">
+    <div class="page-loader" id="pageLoader">
+      <div class="loader-orb"></div>
+      <p>Preparing Checkout</p>
+    </div>
+
+    <div class="ambient ambient-2"></div>
+    <div class="ambient ambient-3"></div>
+
+    <header class="site-header">
+      <nav class="nav glass">
+        <a class="brand" href="index.html">Wearhaat</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+        </button>
+        <div class="nav-panel" id="navPanel">
+          <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="product.html">Product</a>
+            <a href="#tracking">Tracking</a>
+          </div>
+          <div class="nav-actions">
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+              <span class="theme-dark">Dark</span>
+              <span class="theme-light">Light</span>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="section-shell checkout-page">
+      <section class="checkout-grid">
+        <div class="checkout-form glass reveal">
+          <div class="section-head compact">
+            <div>
+              <span class="eyebrow">Secure Checkout</span>
+              <h1>Fast, trusted, and frictionless.</h1>
+            </div>
+          </div>
+
+          <div class="checkout-steps">
+            <span class="active">1. Shipping</span>
+            <span>2. Payment</span>
+            <span>3. Review</span>
+          </div>
+
+          <form class="form-grid">
+            <label>
+              Full name
+              <input type="text" placeholder="Ariana Rahman" />
+            </label>
+            <label>
+              Email
+              <input type="email" placeholder="ariana@wearhaat.com" />
+            </label>
+            <label class="full">
+              Address
+              <input type="text" placeholder="House 18, Road 7, Gulshan" />
+            </label>
+            <label>
+              City
+              <input type="text" placeholder="Dhaka" />
+            </label>
+            <label>
+              Post code
+              <input type="text" placeholder="1212" />
+            </label>
+            <label>
+              Phone
+              <input type="tel" placeholder="+8801XXXXXXXXX" />
+            </label>
+            <label>
+              Delivery method
+              <select>
+                <option>Premium Express</option>
+                <option>Standard Delivery</option>
+              </select>
+            </label>
+            <label class="full">
+              Payment method
+              <select>
+                <option>Credit / Debit Card</option>
+                <option>Mobile Wallet</option>
+                <option>Cash on Delivery</option>
+              </select>
+            </label>
+          </form>
+
+          <div class="coupon-row">
+            <input type="text" placeholder="Enter coupon code" />
+            <button class="button button-secondary" type="button">Apply</button>
+          </div>
+
+          <button class="button button-primary wide">Place Order Securely</button>
+        </div>
+
+        <aside class="order-summary glass reveal">
+          <span class="eyebrow">Order Summary</span>
+          <h2>Your premium edit.</h2>
+
+          <div class="summary-item">
+            <img src="assets/images/wearhaat-men.jpg" alt="Midnight Tailored Set" />
+            <div>
+              <strong>Midnight Tailored Set</strong>
+              <span>Size M · Black</span>
+              <p>$148</p>
+            </div>
+          </div>
+
+          <div class="summary-item">
+            <img src="assets/images/wearhaat-products.jpg" alt="Capsule accessory" />
+            <div>
+              <strong>Electric Blue Wallet</strong>
+              <span>Accent Piece</span>
+              <p>$38</p>
+            </div>
+          </div>
+
+          <div class="summary-lines">
+            <div><span>Subtotal</span><strong>$186</strong></div>
+            <div><span>Shipping</span><strong>$12</strong></div>
+            <div><span>Coupon</span><strong>-$18</strong></div>
+            <div class="total"><span>Total</span><strong>$180</strong></div>
+          </div>
+
+          <div class="assurance-box">
+            <div>
+              <strong>Protected checkout</strong>
+              <span>Fraud screening and encrypted payment flow</span>
+            </div>
+            <div>
+              <strong>Delivery updates</strong>
+              <span>SMS and email notifications included</span>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="tracking-section glass reveal" id="tracking">
+        <div class="section-head compact">
+          <div>
+            <span class="eyebrow">Order Tracking</span>
+            <h2>Track every movement with clarity.</h2>
+          </div>
+        </div>
+        <div class="tracking-grid">
+          <div class="tracking-card active">
+            <strong>Order Confirmed</strong>
+            <span>Your payment has been verified.</span>
+          </div>
+          <div class="tracking-card active">
+            <strong>Packed</strong>
+            <span>Your order is prepared in premium packaging.</span>
+          </div>
+          <div class="tracking-card">
+            <strong>Shipped</strong>
+            <span>Express courier pickup is scheduled.</span>
+          </div>
+          <div class="tracking-card">
+            <strong>Delivered</strong>
+            <span>Expected within 24 to 48 hours.</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

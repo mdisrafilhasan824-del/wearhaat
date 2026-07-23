@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wearhaat | Midnight Tailored Set</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="product">
+    <div class="page-loader" id="pageLoader">
+      <div class="loader-orb"></div>
+      <p>Loading Product</p>
+    </div>
+
+    <div class="ambient ambient-1"></div>
+    <div class="ambient ambient-2"></div>
+
+    <header class="site-header">
+      <nav class="nav glass">
+        <a class="brand" href="index.html">Wearhaat</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+        </button>
+        <div class="nav-panel" id="navPanel">
+          <div class="nav-links">
+            <a href="index.html#collections">Collections</a>
+            <a href="index.html#arrivals">Shop</a>
+            <a href="checkout.html">Checkout</a>
+          </div>
+          <div class="nav-actions">
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+              <span class="theme-dark">Dark</span>
+              <span class="theme-light">Light</span>
+            </button>
+            <a class="icon-button cart-button" href="checkout.html" aria-label="Shopping cart">
+              <span>👜</span>
+              <strong id="cartCount">2</strong>
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="section-shell product-page">
+      <section class="product-layout">
+        <div class="product-gallery glass reveal">
+          <div class="gallery-main zoom-shell">
+            <img
+              id="mainProductImage"
+              src="assets/images/wearhaat-men.jpg"
+              alt="Midnight Tailored Set"
+            />
+          </div>
+          <div class="gallery-thumbs">
+            <button class="thumb active" data-image="assets/images/wearhaat-men.jpg">
+              <img src="assets/images/wearhaat-men.jpg" alt="Product thumbnail 1" />
+            </button>
+            <button class="thumb" data-image="assets/images/wearhaat-products.jpg">
+              <img src="assets/images/wearhaat-products.jpg" alt="Product thumbnail 2" />
+            </button>
+            <button class="thumb gradient-thumb" data-image="assets/images/wearhaat-men.jpg">
+              <span>Detail</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="product-details glass reveal">
+          <span class="eyebrow">Wearhaat Signature</span>
+          <h1>Midnight Tailored Set</h1>
+          <div class="rating-line">
+            <span>★★★★★</span>
+            <p>4.9 rating · 184 verified reviews</p>
+          </div>
+
+          <div class="price-line">
+            <strong>$148</strong>
+            <span>$198</span>
+            <em>25% off</em>
+          </div>
+
+          <p class="product-description">
+            A sharp, lightweight tailored set designed for premium daily wear. Soft-touch fabric,
+            structured silhouette, and understated luxury in every detail.
+          </p>
+
+          <div class="option-group">
+            <label>Size</label>
+            <div class="chip-row">
+              <button class="option-chip">S</button>
+              <button class="option-chip active">M</button>
+              <button class="option-chip">L</button>
+              <button class="option-chip">XL</button>
+            </div>
+          </div>
+
+          <div class="option-group">
+            <label>Color</label>
+            <div class="chip-row">
+              <button class="color-chip active" style="--swatch: #111111" aria-label="Black"></button>
+              <button class="color-chip" style="--swatch: #d9d9d9" aria-label="Soft Gray"></button>
+              <button class="color-chip" style="--swatch: #4f8cff" aria-label="Electric Blue"></button>
+            </div>
+          </div>
+
+          <div class="feature-list">
+            <div><strong>Material</strong><span>Italian blend stretch twill</span></div>
+            <div><strong>Delivery</strong><span>Express shipping in major cities</span></div>
+            <div><strong>Returns</strong><span>Easy 14-day premium returns</span></div>
+          </div>
+
+          <div class="cta-stack">
+            <button class="button button-primary wide" id="addToCartProduct">Add to Cart</button>
+            <a class="button button-secondary wide" href="checkout.html">Buy Now</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="info-grid">
+        <article class="glass reveal">
+          <span class="eyebrow">Description</span>
+          <h2>Premium comfort with editorial precision.</h2>
+          <p>
+            Built for a clean silhouette, this piece balances tailored edges with soft drape,
+            making it ideal for work, events, and elevated daily styling.
+          </p>
+        </article>
+
+        <article class="glass reveal">
+          <span class="eyebrow">Customer Reviews</span>
+          <h2>What buyers are saying.</h2>
+          <div class="mini-list">
+            <div>
+              <strong>Imran</strong>
+              <span>Perfect structure and surprisingly lightweight.</span>
+            </div>
+            <div>
+              <strong>Saima</strong>
+              <span>The fit guide was accurate and checkout felt very premium.</span>
+            </div>
+            <div>
+              <strong>Nadim</strong>
+              <span>Looks more expensive than it already is.</span>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="related-products reveal">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Related Products</span>
+            <h2>Complete the look.</h2>
+          </div>
+        </div>
+        <div class="product-grid compact-grid" id="relatedGrid"></div>
+      </section>
+    </main>
+
+    <div class="sticky-buy glass">
+      <div>
+        <strong>Midnight Tailored Set</strong>
+        <span>$148</span>
+      </div>
+      <a class="button button-primary" href="checkout.html">Buy Now</a>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
